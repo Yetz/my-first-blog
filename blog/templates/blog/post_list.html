@@ -3,18 +3,15 @@
 		<title>Ola's blog</title>
 	</head>
 	<body>
+		<h1>
+		<a href="http://tutorial.djangogirls.org/es/django_templates/index.html"></a>
+		</h1>
+		{% for post in post %}
 		<div>
-			<h1>Yetza´s blog</h1>
-			<h2>Esta es una prueba</h2>
-			<h3>Es divertido</h3>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
 		</div>
-		<div>
-			<em>negrita</em>
-			<p>hi there!</p>
-		</div>
-		<div>
-			<p>it works!</p>
-			<a href="http://tutorial.djangogirls.org/es/html/index.html"></a>
-		</div>
+		{% endfor %}
 	</body>
 </html>
